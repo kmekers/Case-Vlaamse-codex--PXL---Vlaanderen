@@ -142,10 +142,12 @@ Case-Vlaamse-codex--PXL---Vlaanderen/
 - **LinkedIn**: [Koen Mekers](https://www.linkedin.com/in/koen-mekers-a350b018a/)
 - **Vlaamse Codex**: [Officiële website](https://codex.vlaanderen.be/)
 
+
 ## 📞 Contact
 
 Voor vragen of problemen, neem contact op via LinkedIn (Koen Mekers)
 
----
 
 *Ontwikkeld voor de PXL Business Architect AI opleiding* 🎓 
+
+
