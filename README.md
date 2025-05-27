@@ -9,6 +9,7 @@ Coach: Tim
 Dit project bestaat uit drie hoofdcomponenten:
 
 ### 1. 🤖 AI Agent (`Agent V2/`)
+=> Yes, dubbele mappen. (redenen)
 Een Python Flask-gebaseerde AI agent die drukproef documenten analyseert met Claude Sonnet 4.
 
 **Functionaliteiten:**
