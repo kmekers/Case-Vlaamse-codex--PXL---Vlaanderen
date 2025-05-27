@@ -99,9 +99,9 @@ cd frontendprototype
 ## 🔧 Technische Stack
 
 - **Backend**: Python, Flask, Anthropic Claude API
-- **Data Processing**: Jupyter, Pandas, MarkItDown
-- **Frontend**: HTML, CSS, JavaScript, Font Awesome
-- **AI**: Claude Sonnet 4, Gemini 2.0 Flash (geplanned)
+- **Data Processing**: Jupyter, Pandas, MarkItDown, ea.
+- **Frontend**: HTML, CSS, JavaScript, 
+- **AI**: Claude Sonnet 4, Gemini 2.0 Flash (test mee gedaan, niet in huidige repo)
 - **APIs**: Vlaamse Codex officiële API
 
 ## 📁 Project Structuur
