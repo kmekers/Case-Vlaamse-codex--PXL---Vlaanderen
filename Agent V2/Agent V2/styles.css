@@ -456,7 +456,7 @@ body::before {
 }
 
 .control-btn.paused:hover {
-    background: #ff5252;
+    background: #272727;
 }
 
 .pause-status {
@@ -464,7 +464,7 @@ body::before {
     font-size: 0.9rem;
     font-weight: 600;
     margin-left: 15px;
-    animation: pulseGlow 2s infinite;
+
 }
 
 /* Progress Bar */
