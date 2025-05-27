@@ -7,6 +7,7 @@ class VlaamseCodexAgentUI {
         this.startTime = null;
         this.logPollingInterval = null;
         this.lastLogIndex = 0;
+        this.isPaused = false;
         
         // DOM Elements
         this.elements = {
@@ -15,6 +16,8 @@ class VlaamseCodexAgentUI {
             closeModalBtn: document.getElementById('closeModal'),
             clearLogsBtn: document.getElementById('clearLogs'),
             downloadLogsBtn: document.getElementById('downloadLogs'),
+            pausePlayBtn: document.getElementById('pausePlayBtn'),
+            pauseStatus: document.getElementById('pauseStatus'),
             logModal: document.getElementById('logModal'),
             loadingOverlay: document.getElementById('loadingOverlay'),
             logContent: document.getElementById('logContent'),
@@ -36,6 +39,7 @@ class VlaamseCodexAgentUI {
         this.elements.closeModalBtn.addEventListener('click', () => this.closeModal());
         this.elements.clearLogsBtn.addEventListener('click', () => this.clearLogs());
         this.elements.downloadLogsBtn.addEventListener('click', () => this.downloadLogs());
+        this.elements.pausePlayBtn.addEventListener('click', () => this.togglePause());
         
         // Modal events
         this.elements.logModal.addEventListener('click', (e) => {
@@ -95,6 +99,11 @@ class VlaamseCodexAgentUI {
     startLogPolling() {
         // Poll for logs every 500ms
         this.logPollingInterval = setInterval(async () => {
+            // Skip polling if paused
+            if (this.isPaused) {
+                return;
+            }
+            
             try {
                 const response = await fetch('/logs');
                 const data = await response.json();
@@ -112,8 +121,6 @@ class VlaamseCodexAgentUI {
                 if (!data.running && this.isAnalysisRunning) {
                     this.completeAnalysis();
                 }
-                
-
                 
             } catch (error) {
                 console.error('Error polling logs:', error);
@@ -185,6 +192,8 @@ class VlaamseCodexAgentUI {
         // Reset UI
         this.elements.startBtn.disabled = false;
         this.isAnalysisRunning = false;
+        this.isPaused = false;
+        this.updatePauseUI();
     }
     
     showLoadingOverlay() {
@@ -204,8 +213,40 @@ class VlaamseCodexAgentUI {
             this.logPollingInterval = null;
         }
         
+        // Reset pause state
+        this.isPaused = false;
+        this.updatePauseUI();
+        
         // Update UI
         this.elements.startBtn.disabled = false;
+    }
+    
+    togglePause() {
+        this.isPaused = !this.isPaused;
+        this.updatePauseUI();
+        
+        if (this.isPaused) {
+            this.addLogEntry('warning', '⏸️ Log updates gepauzeerd - klik op play om te hervatten');
+        } else {
+            this.addLogEntry('info', '▶️ Log updates hervat');
+        }
+    }
+    
+    updatePauseUI() {
+        const pauseBtn = this.elements.pausePlayBtn;
+        const pauseStatus = this.elements.pauseStatus;
+        
+        if (this.isPaused) {
+            pauseBtn.innerHTML = '<span class="btn-icon">▶️</span>';
+            pauseBtn.classList.add('paused');
+            pauseBtn.title = 'Hervat log updates';
+            pauseStatus.style.display = 'inline';
+        } else {
+            pauseBtn.innerHTML = '<span class="btn-icon">⏸️</span>';
+            pauseBtn.classList.remove('paused');
+            pauseBtn.title = 'Pauze log updates';
+            pauseStatus.style.display = 'none';
+        }
     }
     
     addLogEntry(type, message) {

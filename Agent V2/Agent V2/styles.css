@@ -422,6 +422,51 @@ body::before {
     transform: scale(1.1);
 }
 
+/* Log Controls */
+.log-controls {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.control-btn {
+    background: var(--flemish-black);
+    color: var(--flemish-yellow);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    background: var(--gray-dark);
+    transform: scale(1.1);
+}
+
+.control-btn.paused {
+    background: #ff6b6b;
+    color: white;
+}
+
+.control-btn.paused:hover {
+    background: #ff5252;
+}
+
+.pause-status {
+    color: #ff6b6b;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 15px;
+    animation: pulseGlow 2s infinite;
+}
+
 /* Progress Bar */
 .progress-container {
     padding: 20px 30px;

@@ -29,14 +29,14 @@
                 <div class="tools-grid">
                     <div class="tool-card">
                         <div class="tool-icon">🔍</div>
-                        <h3>Zoek vlaamse codex api</h3>
-                        <p>Zoekt relevante wetgeving in de officiële Vlaamse codex database om referenties te vinden en te verifiëren.</p>
+                        <h3>Zoek Vlaamse codex api</h3>
+                        <p>Zoekt relevante wetgeving in de officiële Vlaamse codex database om referenties te vinden en te verifiëren. De agent maakt de zoektermen en zoekt dan via de API</p>
                     </div>
                     
                     <div class="tool-card">
                         <div class="tool-icon">🔗</div>
                         <h3>Vind relatie</h3>
-                        <p>Analyseert verbanden op documentsniveau via de API.</p>
+                        <p>Analyseert verbanden op documentsniveau via de API. Door metadata als 'heft op' kan de agent makkelijk interpreteren welke wettekst van toepassing is</p>
                     </div>
                     
                     <div class="tool-card">
@@ -86,10 +86,16 @@
                 <div class="log-title">
                     <span class="log-icon">🦁</span>
                     <h2>Vlaamse codex agent - Live analyse</h2>
+                    <span id="pauseStatus" class="pause-status" style="display: none;">⏸️ Gepauzeerd</span>
                 </div>
-                <button id="closeModal" class="close-btn">
-                    <span>✕</span>
-                </button>
+                <div class="log-controls">
+                    <button id="pausePlayBtn" class="control-btn" title="Pauze/Hervat log updates">
+                        <span class="btn-icon">⏸️</span>
+                    </button>
+                    <button id="closeModal" class="close-btn">
+                        <span>✕</span>
+                    </button>
+                </div>
             </div>
 
 

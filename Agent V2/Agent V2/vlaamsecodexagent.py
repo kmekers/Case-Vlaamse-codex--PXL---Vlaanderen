@@ -74,8 +74,8 @@ class VlaamseCodexAgent:
 
     def voer_uit(self):
         """Voer de agent uit - laat Claude beslissen wat te doen met de drukproef."""
-        # Lees het drukproef bestand vanuit de root directory
-        bestand_pad = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'drukproef.md')
+        # Lees het drukproef bestand vanuit de huidige directory
+        bestand_pad = 'drukproef.md'
         
         try:
             with open(bestand_pad, 'r', encoding='utf-8') as f:
