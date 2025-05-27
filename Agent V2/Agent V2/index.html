@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦁 Vlaamse Codex Agent</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🦁 Vlaamse codex agent</h1>
+            <p class="subtitle">Wetgevingsanalyse & consolidatie</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Information Section --> 
+            <section class="info-section">
+                <div class="info-header">
+                    <h2> Hoe werkt de agent?</h2>
+                    <p>De Vlaamse codex agent analyseert automatisch drukproeven en identificeert wijzigingen in wetgeving. De agent gebruikt deze drie gespecialiseerde tools om de analyse uit te voeren. Wanneer de agent denkt het document gereed is, maakt hij een verslag van de wijzigingen en de wetgeving die wordt aangehaald.</p>
+                </div>
+                
+                <div class="tools-grid">
+                    <div class="tool-card">
+                        <div class="tool-icon">🔍</div>
+                        <h3>Zoek vlaamse codex api</h3>
+                        <p>Zoekt relevante wetgeving in de officiële Vlaamse codex database om referenties te vinden en te verifiëren.</p>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">🔗</div>
+                        <h3>Vind relatie</h3>
+                        <p>Analyseert verbanden op documentsniveau via de API.</p>
+                    </div>
+                    
+                    <div class="tool-card">
+                        <div class="tool-icon">📋</div>
+                        <h3>Krijg voorlaatste versie</h3>
+                        <p>Haalt de voorlaatste versie van wetgeving op omdat de huidige versie in de API al geconsolideerd is met eerdere wijzigingen.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Control Panel -->
+            <section class="control-panel">
+                <div class="panel-header">
+                    <h2>⚖️ Analyseer de drukproef</h2>
+                    <p>Start de analyse van uw drukproef document</p>
+                </div>
+                
+                <div class="panel-body">
+                    <div class="file-info">
+                        <div class="file-status">
+                            <span class="status-icon">📄</span>
+                            <span class="status-text">drukproef.md gereed voor analyse</span>
+                        </div>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button id="startAnalysis" class="btn btn-primary">
+                            <span class="btn-icon">🚀</span>
+                            Start analyse
+                        </button>
+                        <button id="reopenLogs" class="btn btn-secondary" style="display: none;">
+                            <span class="btn-icon">📋</span>
+                            Logs bekijken
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Full Screen Log Modal -->
+    <div id="logModal" class="log-modal">
+        <div class="log-modal-content">
+            <!-- Modal Header -->
+            <div class="log-header">
+                <div class="log-title">
+                    <span class="log-icon">🦁</span>
+                    <h2>Vlaamse codex agent - Live analyse</h2>
+                </div>
+                <button id="closeModal" class="close-btn">
+                    <span>✕</span>
+                </button>
+            </div>
+
+
+
+            <!-- Log Container -->
+            <div class="log-container">
+                <div class="log-content" id="logContent">
+                    <div class="log-entry startup">
+                        <span class="log-timestamp">[00:00:00]</span>
+                        <span class="log-message">🦁 Vlaamse Codex Agent wordt geïnitialiseerd...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Bar -->
+            <div class="log-actions">
+                <button id="clearLogs" class="btn btn-outline">
+                    <span class="btn-icon">🗑️</span>
+                    Logs wissen
+                </button>
+                <button id="downloadLogs" class="btn btn-outline">
+                    <span class="btn-icon">💾</span>
+                    Logs downloaden
+                </button>
+                <div class="log-stats">
+                    <span id="logCount">1 log entry</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p class="loading-text">Agent wordt gestart...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 

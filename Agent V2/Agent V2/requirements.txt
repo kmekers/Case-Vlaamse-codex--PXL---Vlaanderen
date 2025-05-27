@@ -1,0 +1,11 @@
+Flask==3.0.0
+python-dotenv==1.0.0
+anthropic==0.34.2
+requests==2.31.0
+httpx==0.27.2
+beautifulsoup4==4.12.2
+flask-cors==4.0.0
+lxml==4.9.3
+markdown==3.5.1
+python-dateutil==2.8.2
+# Add other packages here, one per line 

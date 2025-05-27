@@ -1,0 +1,10 @@
+requests
+tqdm
+matplotlib
+seaborn
+pandas
+numpy
+aiohttp
+nest-asyncio
+markitdown
+pathlib 
