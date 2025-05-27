@@ -74,14 +74,17 @@ class VlaamseCodexAgent:
 
     def voer_uit(self):
         """Voer de agent uit - laat Claude beslissen wat te doen met de drukproef."""
-        # Lees het drukproef bestand vanuit de huidige directory
-        bestand_pad = 'drukproef.md'
+        # Lees het drukproef bestand vanuit de directory waar dit script staat
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        bestand_pad = os.path.join(script_dir, 'drukproef.md')
         
         try:
             with open(bestand_pad, 'r', encoding='utf-8') as f:
                 drukproef_tekst = f.read()
         except Exception as e:
             print(f"❌ Fout bij lezen bestand: {e}")
+            print(f"🔍 Gezocht in: {bestand_pad}")
+            print(f"📁 Script directory: {script_dir}")
             return
 
         print(f"📄 Drukproef geladen van {bestand_pad}")
