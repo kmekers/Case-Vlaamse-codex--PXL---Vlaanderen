@@ -2,6 +2,7 @@
 
 Repo van onze case. Notebook die de hele codex inhaalt, agent en prototype (mock ups) ontwikkeld voor de PXL Business Architect AI opleiding.
 Teamleden: Koen, Charlotte en Elke
+
 Coach: Tim
 
 ## 📋 Project Overzicht
@@ -14,7 +15,8 @@ Een Python Flask-gebaseerde AI agent die drukproef documenten analyseert met Cla
 
 **Functionaliteiten:**
 - Automatische analyse van drukproef documenten
-- Vergelijking met officiële Vlaamse Codex database
+- Zoekt het document dat moet worden aangepast via de drukproef
+- Agent met denkstappen (geen redeneermodel)
 - Real-time logging en status updates
 - Web-gebaseerde interface
 
@@ -99,9 +101,9 @@ cd frontendprototype
 ## 🔧 Technische Stack
 
 - **Backend**: Python, Flask, Anthropic Claude API
-- **Data Processing**: Jupyter, Pandas, MarkItDown
-- **Frontend**: HTML, CSS, JavaScript, Font Awesome
-- **AI**: Claude Sonnet 4, Gemini 2.0 Flash (geplanned)
+- **Data Processing**: Jupyter, Pandas, MarkItDown, ea.
+- **Frontend**: HTML, CSS, JavaScript, 
+- **AI**: Claude Sonnet 4, Gemini 2.0 Flash (test mee gedaan, niet in huidige repo)
 - **APIs**: Vlaamse Codex officiële API
 
 ## 📁 Project Structuur
@@ -140,10 +142,12 @@ Case-Vlaamse-codex--PXL---Vlaanderen/
 - **LinkedIn**: [Koen Mekers](https://www.linkedin.com/in/koen-mekers-a350b018a/)
 - **Vlaamse Codex**: [Officiële website](https://codex.vlaanderen.be/)
 
+
 ## 📞 Contact
 
 Voor vragen of problemen, neem contact op via LinkedIn (Koen Mekers)
 
----
 
 *Ontwikkeld voor de PXL Business Architect AI opleiding* 🎓 
+
+
