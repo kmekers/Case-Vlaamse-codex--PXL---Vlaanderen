@@ -1,6 +1,8 @@
 # 🦁 Vlaamse Codex Project - PXL Business Architect AI
 
-Een complete AI-gestuurde oplossing voor het analyseren en beheren van Vlaamse wetgeving, ontwikkeld voor de PXL Business Architect AI opleiding.
+Repo van onze case. Notebook die de hele codex inhaalt, agent en prototype (mock ups) ontwikkeld voor de PXL Business Architect AI opleiding.
+Teamleden: Koen, Charlotte en Elke
+Coach: Tim
 
 ## 📋 Project Overzicht
 
