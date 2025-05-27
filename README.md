@@ -14,7 +14,8 @@ Een Python Flask-gebaseerde AI agent die drukproef documenten analyseert met Cla
 
 **Functionaliteiten:**
 - Automatische analyse van drukproef documenten
-- Vergelijking met officiële Vlaamse Codex database
+- Zoekt het document dat moet worden aangepast via de drukproef
+- Agent met denkstappen (geen redeneermodel)
 - Real-time logging en status updates
 - Web-gebaseerde interface
 
