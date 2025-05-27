@@ -146,7 +146,7 @@ Case-Vlaamse-codex--PXL---Vlaanderen/
 
 ## 📞 Contact
 
-Voor vragen of problemen, neem contact op via LinkedIn 
+Voor vragen of problemen, neem contact op via LinkedIn (Koen Mekers)
 
 ---
 
