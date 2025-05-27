@@ -12,6 +12,7 @@ Dit project bestaat uit drie hoofdcomponenten:
 ### 1. 🤖 AI Agent (`Agent V2/`)
 => Yes, dubbele mappen. (redenen)
 Een Python Flask-gebaseerde AI agent die drukproef documenten analyseert met Claude Sonnet 4.
+De agent heeft 3 tools ter beschikking, deze staan in de folder 'Tools'
 
 **Functionaliteiten:**
 - Automatische analyse van drukproef documenten
