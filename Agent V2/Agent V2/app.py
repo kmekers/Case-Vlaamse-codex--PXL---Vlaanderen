@@ -8,8 +8,7 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-# Import the correct agent from Agent V2. 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'Agent V2'))
+# Import the agent from current directory
 from vlaamsecodexagent import VlaamseCodexAgent
 
 app = Flask(__name__)
@@ -37,11 +36,11 @@ log_capture = LogCapture()
 
 @app.route('/')
 def index():
-    return send_from_directory('Agent V2', 'index.html')
+    return send_from_directory('.', 'index.html')
 
 @app.route('/<path:filename>')
 def serve_static(filename):
-    return send_from_directory('Agent V2', filename)
+    return send_from_directory('.', filename)
 
 @app.route('/start', methods=['POST'])
 def start_analysis():
