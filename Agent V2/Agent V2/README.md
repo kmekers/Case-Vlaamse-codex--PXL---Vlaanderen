@@ -55,8 +55,8 @@ De Vlaamse Codex Agent is een AI-gestuurde assistent die drukproef documenten an
 
 ```
 vlaamsecodexagent/
-├── app.py                 # Flask server (NIEUW)
-├── requirements.txt       # Python dependencies (NIEUW)
+├── app.py                 # Flask server 
+├── requirements.txt       # Python dependencies 
 ├── drukproef.md          # Drukproef document om te analyseren
 ├── Agent V2/             # Frontend en agent code
 │   ├── index.html        # Hoofdpagina
@@ -69,7 +69,7 @@ vlaamsecodexagent/
 │       ├── krijg_voorlaatste_versie.py
 │       ├── vind_relatie.py
 │       └── zoek_vlaamse_codex_api.py
-└── README.md             # Dit bestand (NIEUW)
+└── README.md             # Dit bestand 
 ```
 
 ## 🔧 API Endpoints
