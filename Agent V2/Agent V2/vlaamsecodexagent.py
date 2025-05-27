@@ -59,8 +59,8 @@ class VlaamseCodexAgent:
                 if tool_naam == "krijg_voorlaatste_versie" and resultaat.get('succes'):
                     document_id = parameters.get('document_id')
                     inhoud = resultaat.get('inhoud', '')
-                    print(f"📄 Document {document_id} succesvol opgehaald")
-                    # Bewaar op een globale manier die toegankelijk is voor de Flask app
+                    print(f"📄 Document {document_id} succesvol gescraped via website Vlaamse Codex en omgezet naar markdown")
+                    print(f"🦁 Ik maak nu een consolidatieplan voor deze wettekst en benoem vorige versies")
                     if hasattr(self, '_document_callback'):
                         self._document_callback(document_id, inhoud)
                 
@@ -148,7 +148,7 @@ Wees adaptief - als één aanpak niet goed werkt, probeer verschillende zoekterm
                     for content_block in response.content:
                         if content_block.type == "text" and content_block.text.strip():
                             if not heeft_tekst:
-                                print("🧠 Codex agent denkt:")
+                                print("🦁 Codex agent denkt:")
                             
                                 heeft_tekst = True
                             print(content_block.text)
