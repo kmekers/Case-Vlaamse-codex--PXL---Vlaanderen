@@ -2,6 +2,7 @@
 
 Repo van onze case. Notebook die de hele codex inhaalt, agent en prototype (mock ups) ontwikkeld voor de PXL Business Architect AI opleiding.
 Teamleden: Koen, Charlotte en Elke
+
 Coach: Tim
 
 ## 📋 Project Overzicht
