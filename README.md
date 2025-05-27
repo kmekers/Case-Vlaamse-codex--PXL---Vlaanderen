@@ -126,13 +126,6 @@ Case-Vlaamse-codex--PXL---Vlaanderen/
 └── README.md                  # Dit bestand
 ```
 
-## 🎯 Gebruik Cases
-
-1. **Wetgeving Analyse**: Upload drukproef documenten voor automatische analyse
-2. **Data Mining**: Scrape en analyseer Vlaamse Codex voor trends
-3. **UI/UX Design**: Bekijk en test de gebruikersinterface
-4. **Research**: Gebruik voor academische doeleinden en AI training
-
 ## ⚠️ Belangrijke Opmerkingen
 
 - **Eerste Jupyter Project & agent**: Dit is mijn eerste Jupyter notebook project - er kunnen kinderziektes zijn
