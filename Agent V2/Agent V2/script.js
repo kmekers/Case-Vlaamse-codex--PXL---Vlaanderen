@@ -419,20 +419,5 @@ window.VlaamseCodexAPI = {
     async getAnalysis() {
         const response = await fetch('/analysis');
         return response.json();
-    },
-    
-    async getDocument(documentId) {
-        const response = await fetch(`/document/${documentId}`);
-        return response.json();
-    },
-    
-    async startConsolidation() {
-        const response = await fetch('/consolidate', { method: 'POST' });
-        return response.json();
-    },
-    
-    async getConsolidation() {
-        const response = await fetch('/consolidation');
-        return response.json();
     }
-}; 
+};
