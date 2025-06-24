@@ -10,7 +10,6 @@ Coach: Tim
 Dit project bestaat uit drie hoofdcomponenten:
 
 ### 1. 🤖 AI Agent (`Agent V2/`)
-=> Yes, dubbele mappen. (redenen)
 Een Python Flask-gebaseerde AI agent die drukproef documenten analyseert met Claude Sonnet 4.
 De agent heeft 3 tools ter beschikking, deze staan in de folder 'Tools'
 
@@ -23,7 +22,7 @@ De agent heeft 3 tools ter beschikking, deze staan in de folder 'Tools'
 
 **Snelle start:**
 ```bash
-cd "Agent V2/Agent V2"
+cd "Agent V2"
 pip install -r requirements.txt
 python app.py
 # Ga naar http://127.0.0.1:5000
@@ -80,7 +79,7 @@ cd frontendprototype
 
 2. **Setup AI Agent:**
    ```bash
-   cd "Agent V2/Agent V2"
+   cd "Agent V2"
    pip install -r requirements.txt
    # Voeg ANTHROPIC_API_KEY toe aan .env
    python app.py
@@ -112,11 +111,10 @@ cd frontendprototype
 ```
 Case-Vlaamse-codex--PXL---Vlaanderen/
 ├── Agent V2/                    # AI Agent applicatie
-│   └── Agent V2/
-│       ├── app.py              # Flask server
-│       ├── vlaamsecodexagent.py # Agent logica
-│       ├── tools/              # Agent tools
-│       └── requirements.txt
+│   ├── app.py                  # Flask server
+│   ├── vlaamsecodexagent.py    # Agent logica
+│   ├── tools/                  # Agent tools
+│   └── requirements.txt
 ├── notebook/                   # Data scraper & analyse
 │   ├── Vlaamsecodexcase.ipynb # Hoofdnotebook
 │   ├── codexjson/             # Ruwe API data
